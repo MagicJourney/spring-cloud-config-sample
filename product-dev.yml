@@ -94,4 +94,4 @@ management:
 #     servlet:
 #       context-path: /
 
-info: dev
+info: dev1
