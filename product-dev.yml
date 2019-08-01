@@ -1,5 +1,5 @@
 server:
-  port: 2100
+  port: 2200
 
 logging:
   level:
@@ -7,7 +7,7 @@ logging:
 
 spring:
   application:
-    name: user
+    name: product
   jpa:
     generate-ddl: true
     show-sql: true
@@ -81,5 +81,17 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8260/eureka/
 
-info: default
+feign:
+  hystrix:
+    enabled: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#   server:
+#     servlet:
+#       context-path: /
+
+info: dev
